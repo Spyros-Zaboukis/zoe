@@ -9,7 +9,7 @@ Welcome
 @section('content')
 
 
-<h1>The truth is what Google says about you!</h1>
+<h1 class="text-red-500">The truth is what Google says about you!</h1>
     <p>
         Welcome to your site, this is your space, a space that looks like you and that really reflects what you want to highlight about your personality.
         It complements your CV and cover letter.
