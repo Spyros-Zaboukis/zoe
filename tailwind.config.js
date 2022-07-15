@@ -18,7 +18,8 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                myBanner: "url('images/bannerProfil.jpg')",
+                'hero': "url('/public/images/bannerProfil.jpeg')",
+                'banner2': "url('/public/images/banner2.jpeg')"
               },
               colors:{
                 oop: "red"
