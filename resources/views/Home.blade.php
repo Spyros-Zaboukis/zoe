@@ -14,20 +14,25 @@ Welcome
 
 
     <h1 class="font-serif text-4xl ml-40 mt-5">The truth is what Google says about you!</h1>
-    <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 border border-blue-700 rounded ml-80 mb-20 mt-10 mr-10 w-40">
-        Enter</button>
+        <a href="{{ route('login') }}">
+            <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 border border-blue-700 rounded ml-80 mb-20 mt-10 mr-10 w-40">
+                Enter</button></a>
+
+        <a href="{{ route('register') }}">
     <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 border border-blue-700 rounded w-40">
-        Register</button>
+        Register</button></a>
+
 
 
 </div>
 
 <div class="ml-40 text-center w-9/12">
     <h2 class="font-serif text-4xl mt-20">Welcome to your Website</h2>
-        <p class="text-gray-500 sm:text-lg mb-10">
+        <p class="text-gray-500 text-xl my-10">
             This space is your space, a space that looks like you and that really reflects what you want to highlight about your personality.
             It complements your CV and cover letter.
             This is your reference!
+            <img src=" {{ URL::asset('images/social-media.jpg')}}" class="w-40 m-auto mt-10">
         </p>
 </div>
 
@@ -62,8 +67,10 @@ Welcome
             We learned the basics of web development and deepened our knowledge.
             Today, ProfilOf is a preview of what the finished product could be.
             I wish you a good discovery.<br/>
-            <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 border border-blue-700 rounded ml-60 mt-10 w-40">
-                Register</button>
+
+            <a href="{{ route('register') }}">
+                <button class="bg-sky-700 hover:bg-sky-600 text-white font-bold py-2 px-4 border border-blue-700 rounded w-40 ml-48 mt-8">
+                    Register</button></a>
           </p>
         </div>
       </div>
@@ -71,7 +78,7 @@ Welcome
   </div>
 
 
-<!---------------------------Texte de fin ---------------------------------->
+<!--------------------------- Learn more ---------------------------------->
 
 <div class="bg-banner2 bg-no-repeat bg-cover">
 <div class="ml-40 text-center w-9/12 py-20">
@@ -82,8 +89,9 @@ Welcome
             a business or human resources department.
             This is where you can express yourself.
         </p>
-            <button class="bg-white hover:bg-sky-600 text-sky-700 font-bold py-2 px-4 border border-blue-700 rounded mt-10 w-40">
-                Register</button>
+        <a href="{{ route('register') }}">
+            <button class="bg-white hover:bg-sky-200 text-sky-700 font-bold py-2 px-4 border border-grey-700 rounded w-40 mt-8 mb-16">
+                Register</button></a>
 </div>
 </div>
 
