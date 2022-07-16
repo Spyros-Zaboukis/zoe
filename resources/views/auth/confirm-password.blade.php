@@ -1,5 +1,27 @@
 <x-guest-layout>
     <x-auth-card>
+
+<!-------------------------------- spy ajout de texte ---------------------------------->
+<section class="flex flex-col items-center">
+    <div class="max-w-xl flex flex-col items-center text-center pt-3 lg:pt-8 pb-4 lg:pb-6">
+      <p class="text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-4">Confirm your email & password </p>
+
+      <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-4">Confirm Your Email</h1>
+    </div>
+  </section>
+
+
+
+
+
+
+<!-------------------------------------------------------------------------------------->
+
+
+
+
+
+
         <x-slot name="logo">
             <a href="/">
                <!---   <x-application-logo class="w-20 h-20 fill-current text-gray-500" />  --->
