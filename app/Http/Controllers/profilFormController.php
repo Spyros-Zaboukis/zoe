@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class profilForm extends Controller
+class profilFormController extends Controller
 {
     public function showForm(){
         return view('myForm');
     }
+
 }
