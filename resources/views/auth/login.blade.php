@@ -1,12 +1,6 @@
 
-
-
-
 <x-guest-layout>
-
-
     <x-auth-card>
-
 
 <!-------------------------------- spy ajout de texte ---------------------------------->
     <section class="flex flex-col items-center">
@@ -16,11 +10,6 @@
           <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-4">Conect Your ProfilOf</h1>
         </div>
       </section>
-
-
-
-
-
 
 <!-------------------------------------------------------------------------------------->
 
