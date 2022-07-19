@@ -34,13 +34,30 @@
 
 
         <div>
-          <label for="first-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">First name*</label>
-          <input name="first-name" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          <label for="first-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
+            First name*</label>
+          <input type="text" name="first-name" id="first-name" placeholder="Your first name"
+          class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('first-name')  is invalid @enderror”  value="{{ old('first-name') }}” />
+
+        <!--- error event --->
+            @error('first-name')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
         </div>
 
+
+<!---------->
+
         <div>
-          <label for="last-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Last name*</label>
-          <input name="last-name" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          <label for="last-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
+            Last name*</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Last name"
+          class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('last-name')  is invalid @enderror”  value="{{ old('last-name') }}” />
+
+          <!--- error event --->
+          @error('last-name')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
         </div>
 
 
@@ -48,12 +65,13 @@
 
 
         <div>
-            <label for="gender" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Gender</label>
-            <select name="gender" id="genderId" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2">
-                <option value="">--Please choose ypur gender--</option>
+            <label for="gender" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Gender*</label>
+            <select name="gender" id="gender"
+            class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" required>
+                <option value="">--Please choose your gender--</option>
                 <option value="dog">Man</option>
                 <option value="cat">Woman</option>
-                <option value="hamster">XGender</option>
+                <option value="hamster">X</option>
                 <option value="parrot">Other</option>
             </select>
 
@@ -63,41 +81,58 @@
 <!---------------- birthday ------------------>
 
           <div>
-            <label for="birthday" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Birthday</label>
-            <input type="date" name="first-name" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+            <label for="birthday" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Birthday*</label>
+            <input type="date" name="first-name" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" required />
           </div>
 
 
 <!---------------- Email ------------------>
         <div class="sm:col-span-2">
           <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Email*</label>
-          <input name="email" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+          <input name="email" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2  form-control @error('email') is invalid @enderror”  value="{{ old('email') }}” placeholder="EnterYour@email.com" />
+
+            @error('email')
+		        <div class="invalid-feedback">{{ $message }}</div>
+	        @enderror
         </div>
 
-<!---------------- Prefession ------------------>
+<!---------------- Profession ------------------>
 
         <div class="sm:col-span-2">
-            <label for="company" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Profession</label>
-            <input name="company" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
-          </div>
+            <label for="company" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Company*</label>
+            <input name="company" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('company') is invalid @enderror”  value="{{ old('company') }}” placeholder="Company name" />
+
+                @error('company')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+        </div>
 
 <!---------------- About me ------------------>
 
 
         <div class="sm:col-span-2">
-          <label for="message" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Aboout me*</label>
-          <textarea name="message" class="w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2"></textarea>
+          <label for="message" class="inline-block text-gray-800 text-sm sm:text-base mb-2 form-control @error('message') is invalid @enderror”  value="{{ old('message') }}”>Aboout me*</label>
+            <textarea name="message" class="w-full h-64 bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('message') is invalid @enderror”  value="{{ old('message') }}” required>
+            </textarea>
+                @error('message')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
         </div>
+
+
+<!----------------  Submit ------------------>
 
         <div class="sm:col-span-2 flex justify-between items-center">
           <button class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Send</button>
 
+        <!-- info -->
           <span class="text-gray-500 text-sm">*Required</span>
         </div>
 
         <p class="text-gray-400 text-xs">By signing up to our newsletter you agree to our <a href="#" class="hover:text-indigo-500 active:text-indigo-600 underline transition duration-100">Privacy Policy</a>.</p>
       </form>
-      <!-- form - end -->
+        <!-- form end -->
+
     </div>
   </div>
   @endsection
