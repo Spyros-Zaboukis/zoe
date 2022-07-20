@@ -24,7 +24,13 @@ class myFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'firstName' => 'bail | required | between:5,20 | alpha',
+            'lastName' => 'bail | required | between:5,20 | alpha',
+            'gender' => 'bail | required',
+            'birthday' => 'bail',
+            'email' => 'bail | required | email',
+            'company' => 'bail | required | between:5,20',
+            'message' => 'bail | required | max:500'
         ];
     }
 }

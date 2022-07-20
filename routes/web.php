@@ -27,4 +27,4 @@ require __DIR__.'/auth.php';
 
 //Route form myForm profilForm
 Route::get('/myForm', [profilFormController::class, 'showForm'])->name('myForm');
-Route::post('/myForm', [profilFormController::class, 'verifyForm'])->name('myFormStore');
+Route::post('/myForm', [profilFormController::class, 'myFormStore'])->name('myFormStore');

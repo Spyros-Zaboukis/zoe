@@ -25,7 +25,7 @@
 
       <!-- form - start -->
 
-      <form method="POST" action="{{route('myFormStore')}}" class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
+      <form method="POST" action="{{ route('myFormStore') }}" class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
 
         @csrf
 
@@ -34,13 +34,13 @@
 
 
         <div>
-          <label for="first-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
+          <label for="firstName" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
             First name*</label>
-          <input type="text" name="first-name" id="first-name" placeholder="Your first name"
+          <input type="text" name="firstName" id="firstName" placeholder="Your first name"
           class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('first-name')  is invalid @enderror”  value="{{ old('first-name') }}” />
 
         <!--- error event --->
-            @error('first-name')
+            @error('firsName')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
@@ -49,13 +49,13 @@
 <!---------->
 
         <div>
-          <label for="last-name" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
+          <label for="lastName" class="inline-block text-gray-800 text-sm sm:text-base mb-2">
             Last name*</label>
-          <input type="text" name="last-name" id="last-name" placeholder="Last name"
+          <input type="text" name="lastName" id="last-name" placeholder="Last name"
           class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2 form-control @error('last-name')  is invalid @enderror”  value="{{ old('last-name') }}” />
 
           <!--- error event --->
-          @error('last-name')
+          @error('lastName')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
