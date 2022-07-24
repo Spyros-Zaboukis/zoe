@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\profilFormController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\profilPublicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ require __DIR__.'/auth.php';
 //Route form myForm profilForm
 Route::get('/myForm', [profilFormController::class, 'showForm'])->name('myForm');
 Route::post('/myForm', [profilFormController::class, 'myFormStore'])->name('myFormStore');
+
+
+
+//Route for view all profils
+Route::get('/profils', [profilPublicController::class, 'showProfils'])->name('profils');
